@@ -27,7 +27,8 @@ const buildControls = (props) => {
         )}
       <button
         className={ classes.OrderButton }
-        disabled={props.disabled['order']}>ORDER NOW</button>
+        disabled={props.disabled['order']}
+        onClick={ props.ordered }>ORDER NOW</button>
     </div>
   );
 };
@@ -35,14 +36,9 @@ const buildControls = (props) => {
 buildControls.propTypes = {
   ingredientAdded: PropTypes.func.isRequired,
   ingredientRemoved: PropTypes.func.isRequired,
-  disabled: PropTypes.shape({
-    salad: PropTypes.bool.isRequired,
-    bacon: PropTypes.bool.isRequired,
-    cheese: PropTypes.bool.isRequired,
-    meat: PropTypes.bool.isRequired,
-    order: PropTypes.bool.isRequired
-  }),
-  price: PropTypes.number.isRequired
+  disabled: PropTypes.object,
+  price: PropTypes.number.isRequired,
+  ordered: PropTypes.func,
 };
 
 export default buildControls;
