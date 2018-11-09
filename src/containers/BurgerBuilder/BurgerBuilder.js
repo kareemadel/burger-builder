@@ -45,6 +45,7 @@ class BurgerBuilder extends Component {
     for (let ingredient in this.state.ingredients ) {
       disabledInfo[ingredient] = this.state.ingredients[ingredient] <= 0;
     }
+    disabledInfo['order'] = Object.values(disabledInfo).every((elem) => elem);
     return (
       <Aux>
         <Burger ingredients={this.state.ingredients}/>

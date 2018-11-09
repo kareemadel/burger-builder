@@ -15,13 +15,19 @@ const buildControls = (props) => {
   return (
     <div className={ classes.BuildControls }>
       <p>Current Price: <strong>{ props.price.toFixed(2) }</strong></p>
-      { controls.map((control) => <BuildControl
-        key={ control.label }
-        label={ control.label }
-        type= { control.type }
-        added={ props.ingredientAdded }
-        removed={ props.ingredientRemoved }
-        disabled={ props.disabled[control.type]} />) }
+      {
+        controls.map((control) =>
+          <BuildControl
+            key={ control.label }
+            label={ control.label }
+            type= { control.type }
+            added={ props.ingredientAdded }
+            removed={ props.ingredientRemoved }
+            disabled={ props.disabled[control.type]} />
+        )}
+      <button
+        className={ classes.OrderButton }
+        disabled={props.disabled['order']}>ORDER NOW</button>
     </div>
   );
 };
@@ -33,7 +39,8 @@ buildControls.propTypes = {
     salad: PropTypes.bool.isRequired,
     bacon: PropTypes.bool.isRequired,
     cheese: PropTypes.bool.isRequired,
-    meat: PropTypes.bool.isRequired
+    meat: PropTypes.bool.isRequired,
+    order: PropTypes.bool.isRequired
   }),
   price: PropTypes.number.isRequired
 };
