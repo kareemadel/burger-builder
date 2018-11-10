@@ -1,0 +1,24 @@
+.NavigationItems {
+    height: 100%;
+}
+
+.NavigationItems ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+@media (min-width: 500px) {
+    .NavigationItems ul{
+        flex-flow: row;
+    }
+}
+
+@media (max-width: 499px) {
+    .DesktopOnly {
+        display: none;
+    }
+}
