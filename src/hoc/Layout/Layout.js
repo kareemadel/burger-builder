@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Aux from '../../hoc/Aux';
+import Aux from '../Aux/Aux';
 import Classes from './Layout.css';
-import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
-import Toolbar from '../Navigation/Toolbar/Toolbar';
+import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 
 class Layout extends Component {
   state = {
