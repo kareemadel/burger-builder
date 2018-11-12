@@ -20,8 +20,8 @@ const modal = (props) => (
 );
 
 modal.propTypes = {
-  children: PropTypes.element,
-  show: PropTypes.bool,
+  children: PropTypes.node,
+  show: PropTypes.any,
   backDropClicked: PropTypes.func
 };
 
