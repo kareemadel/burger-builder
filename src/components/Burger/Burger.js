@@ -6,7 +6,7 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
   let ingredientsArr = [];
-  Object.keys(props.ingredients)
+  Object.keys(props.ingredients || {})
     .forEach((ingredientKey) => {
       for (let i = 0; i < props.ingredients[ingredientKey]; i++) {
         ingredientsArr.push(<BurgerIngredient key={ ingredientKey + i } type={ ingredientKey }/>);
