@@ -31,7 +31,7 @@ class Layout extends Component {
 }
 
 Layout.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.node
 };
 
 
