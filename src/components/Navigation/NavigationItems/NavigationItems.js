@@ -10,8 +10,8 @@ const navigationItems = (props) => (
       classes.NavigationItems,
       props.isDesktopOnly ? classes.DesktopOnly : null ].join(' ') }>
     <ul>
-      <NavigationItems link="/" active>Burger Builder</NavigationItems>
-      <NavigationItems link="/">Checkout</NavigationItems>
+      <NavigationItems link="/" exact>Burger Builder</NavigationItems>
+      <NavigationItems link="/orders">Order</NavigationItems>
     </ul>
   </nav>
 );
