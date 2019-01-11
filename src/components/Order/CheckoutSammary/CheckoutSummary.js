@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Burger from '../../Burger/Burger';
 import Button from '../../UI/Button/Button';
-import classes from './CheckoutSummary.css';
+import classes from './CheckoutSummary.module.css';
 
 const checkoutSummary = (props) => {
   return (

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import classes from './BuildControl.css';
+import classes from './BuildControl.module.css';
 
 class BuildControl extends Component {
 

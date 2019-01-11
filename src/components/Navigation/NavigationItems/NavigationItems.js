@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classes from './NavigationItems.css';
+import classes from './NavigationItems.module.css';
 import NavigationItems from './NavigationItem/NavigationItem';
 
 const navigationItems = (props) => (
